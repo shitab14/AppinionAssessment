@@ -68,10 +68,13 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/spinner_bg"
                 android:layout_marginTop="15dp">
+
                 <Spinner
-                    android:id="@+id/spinner"
+                    android:id="@+id/spinner_productgroup"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"/>
+                    android:layout_height="50dp"
+
+                    />
             </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
@@ -100,7 +103,7 @@
                     android:background="@drawable/spinner_bg">
 
                     <Spinner
-                        android:id="@+id/spinner1"
+                        android:id="@+id/spinner_literature"
                         android:layout_width="match_parent"
                         android:layout_height="50dp" />
                 </LinearLayout>
@@ -260,7 +263,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/field_accompaniedwith"
-                android:layout_width="373dp"
+                android:layout_width="match_parent"
                 android:layout_height="57dp"
                 android:layout_margin="10dp"
                 android:inputType="textMultiLine"
@@ -284,6 +287,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:id="@+id/edittext_remarks"
                 android:gravity="top"
                 android:layout_margin="10dp"
                 app:boxStrokeColor="@color/bordercolor"
