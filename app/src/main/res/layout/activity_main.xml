@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +7,13 @@
     android:background="@color/gray"
     tools:context=".MainActivity"
     android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
 
     <LinearLayout
         android:id="@+id/linearlayout1"
@@ -37,6 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:paddingTop="30dp"
+
         android:background="@color/darkgray"
         ></View>
 
@@ -48,221 +56,178 @@
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="88dp"
+        android:paddingTop="15dp"
         >
 
-        <TextView
-            android:id="@+id/title_productgroup"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="    Product Group"
-            android:textSize="18sp"
-            android:paddingTop="20dp"
-            android:paddingLeft="10dp"/>
-        <LinearLayout
-            android:id="@+id/linearlayout22"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/border"
-
-            android:layout_margin="10dp">
-            <Spinner
-                android:id="@+id/spinner_productgroup"
+            android:padding="20dp">
+            <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_bg"
+                android:layout_marginTop="15dp">
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Group"
+                android:textSize="18sp"
+                android:background="#F5F5F5"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="340dp"
+                android:layout_height="116dp"
+                android:layout_gravity="left"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/spinner_bg">
+
+                    <Spinner
+                        android:id="@+id/spinner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="#F5F5F5"
+                    android:padding="5dp"
+                    android:text="Literature"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/editText_literature"
+                android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:textColor="@color/lightseagreen"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:inputType="number"
+                android:text="  "
+                android:background="@drawable/spinner_bg"
+                android:enabled="false"
+                app:boxStrokeColor="@color/bordercolor"
                 />
         </LinearLayout>
 
-
-        <TextView
-            android:id="@+id/title_literature"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="     Literature"
-            android:textSize="18sp"
-            android:paddingTop="5dp"
-            android:paddingLeft="10dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <LinearLayout
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp">
-            <Spinner
-                android:id="@+id/spinner_literature"
-                android:layout_width="330dp"
-                android:layout_height="50dp"
-                android:layout_gravity="left"
-                android:textColor="@color/lightseagreen"/>
-            </LinearLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-
-
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-
-                android:layout_marginLeft="20dp"
-
-
-                app:boxStrokeColor="@color/black"
-                android:gravity="center"
-                android:layout_gravity="top|right"
-                app:boxCornerRadiusTopEnd="5dp"
-
-
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-
-                    android:id="@+id/editText_literature"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:inputType="number"
-                    android:text="  "
-                    android:enabled="false" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/title_physiciansample"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="     Physician Sample"
-            android:textSize="18sp"
-            android:paddingTop="5dp"
-            android:paddingLeft="10dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <LinearLayout
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                >
-            <Spinner
-                android:id="@+id/spinner_physiciansample"
-                android:layout_width="330dp"
-                android:layout_height="50dp"
-                android:layout_gravity="left"
-                android:textColor="@color/lightseagreen"/>
-            </LinearLayout>
-
-
-
-            <com.google.android.material.textfield.TextInputLayout
-
-
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-
-                android:layout_marginLeft="20dp"
-
-
-                app:boxStrokeColor="@color/black"
-                android:gravity="center"
-                android:layout_gravity="top|right"
-                app:boxCornerRadiusTopEnd="5dp"
-
-
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-
-                    android:id="@+id/editText_physiciansample"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:inputType="number"
-                    android:text="  "
-                    android:enabled="false"/>
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/title_gift"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="     Gift"
-            android:textSize="18sp"
-            android:paddingTop="5dp"
-            android:paddingLeft="10dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="15dp"
-            >
-
-            <LinearLayout
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                >
-            <Spinner
-                android:id="@+id/spinner_gift"
-                android:layout_width="330dp"
-                android:layout_height="50dp"
-                android:layout_gravity="left"
-                android:textColor="@color/lightseagreen"/>
-            </LinearLayout>
-
-
-
-            <com.google.android.material.textfield.TextInputLayout
-
-
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-
-                android:layout_marginLeft="20dp"
-
-
-                app:boxStrokeColor="@color/black"
-                android:gravity="center"
-                android:layout_gravity="top|right"
-                app:boxCornerRadiusTopEnd="5dp"
-
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-
-                    android:id="@+id/editText_gift"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:inputType="number"
-                    android:text="  "
-                    android:enabled="false" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
-
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="340dp"
+            android:layout_height="116dp"
+            android:layout_gravity="left"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/spinner_bg">
+
+                <Spinner
+                    android:id="@+id/spinner_physiciansample"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title_physiciansample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#F5F5F5"
+                android:padding="5dp"
+                android:text="Physician Sample"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/editText_physiciansample"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:inputType="number"
+            android:text="  "
+            android:background="@drawable/spinner_bg"
+            android:enabled="false"
+            app:boxStrokeColor="@color/bordercolor"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="340dp"
+            android:layout_height="116dp"
+            android:layout_gravity="left"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/spinner_bg">
+
+                <Spinner
+                    android:id="@+id/spinner_gift"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title_gift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#F5F5F5"
+                android:padding="5dp"
+                android:text="Gift"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/editText_gift"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:inputType="number"
+            android:text="  "
+            android:background="@drawable/spinner_bg"
+            android:enabled="false"
+            app:boxStrokeColor="@color/bordercolor"
+            />
+    </LinearLayout>
+
+
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -289,21 +254,19 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:enabled="true"
-
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/field_accompaniedwith"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:boxStrokeColor="@color/black"
-            app:boxCornerRadiusTopStart="5dp"
-
-
-
-            android:inputType="textMultiLine"
-            android:textColor="@color/lightseagreen" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/field_accompaniedwith"
+                android:layout_width="373dp"
+                android:layout_height="57dp"
+                android:layout_margin="10dp"
+                android:inputType="textMultiLine"
+                android:textColor="@color/lightseagreen"
+                app:boxCornerRadiusTopStart="5dp"
+                app:boxStrokeColor="@color/bordercolor" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -316,7 +279,6 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:enabled="true"
-
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -324,7 +286,7 @@
                 android:layout_height="100dp"
                 android:gravity="top"
                 android:layout_margin="10dp"
-                app:boxStrokeColor="@color/black"
+                app:boxStrokeColor="@color/bordercolor"
                 app:boxCornerRadiusTopStart="5dp"
                 android:inputType="textMultiLine"
                 android:textColor="@color/lightseagreen"
@@ -347,4 +309,11 @@
             android:textColor="@color/gray" />
     </LinearLayout>
 
+
+
+
+
+
 </LinearLayout>
+
+</ScrollView>
