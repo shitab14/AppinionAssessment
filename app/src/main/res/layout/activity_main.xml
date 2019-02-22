@@ -83,15 +83,18 @@
                 android:textSize="18sp"
                 android:background="#F5F5F5"
                 android:layout_marginLeft="10dp"
-                android:padding="5dp"/>
+                android:padding="5dp"
+                android:backgroundTint="@color/gray"/>
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:orientation="horizontal">
+
             <RelativeLayout
-                android:layout_width="340dp"
+                android:layout_width="300dp"
                 android:layout_height="116dp"
                 android:layout_gravity="left"
                 android:padding="20dp">
@@ -115,21 +118,22 @@
                     android:background="#F5F5F5"
                     android:padding="5dp"
                     android:text="Literature"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/gray"/>
             </RelativeLayout>
 
             <TextView
                 android:id="@+id/editText_literature"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:inputType="number"
-                android:text="  "
+                android:layout_gravity="right|center_vertical"
                 android:background="@drawable/spinner_bg"
                 android:enabled="false"
-                app:boxStrokeColor="@color/bordercolor"
-                />
+                android:gravity="center"
+                android:inputType="number"
+                android:text="  "
+                android:textColor="@color/black"
+                app:boxStrokeColor="@color/bordercolor" />
         </LinearLayout>
 
     </LinearLayout>
@@ -137,9 +141,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
         android:orientation="horizontal">
+
         <RelativeLayout
-            android:layout_width="340dp"
+            android:layout_width="300dp"
             android:layout_height="116dp"
             android:layout_gravity="left"
             android:padding="20dp">
@@ -164,29 +170,32 @@
                 android:background="#F5F5F5"
                 android:padding="5dp"
                 android:text="Physician Sample"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:backgroundTint="@color/gray"/>
         </RelativeLayout>
 
         <TextView
             android:id="@+id/editText_physiciansample"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:inputType="number"
-            android:text="  "
+            android:layout_gravity="right|center_vertical"
             android:background="@drawable/spinner_bg"
             android:enabled="false"
-            app:boxStrokeColor="@color/bordercolor"
-            />
+            android:gravity="center"
+            android:inputType="number"
+            android:text="  "
+            android:textColor="@color/black"
+            app:boxStrokeColor="@color/bordercolor" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
         android:orientation="horizontal">
+
         <RelativeLayout
-            android:layout_width="340dp"
+            android:layout_width="300dp"
             android:layout_height="116dp"
             android:layout_gravity="left"
             android:padding="20dp">
@@ -211,21 +220,22 @@
                 android:background="#F5F5F5"
                 android:padding="5dp"
                 android:text="Gift"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:backgroundTint="@color/gray"/>
         </RelativeLayout>
 
         <TextView
             android:id="@+id/editText_gift"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:inputType="number"
-            android:text="  "
+            android:layout_gravity="right|center_vertical"
             android:background="@drawable/spinner_bg"
             android:enabled="false"
-            app:boxStrokeColor="@color/bordercolor"
-            />
+            android:gravity="center"
+            android:inputType="number"
+            android:text="  "
+            android:textColor="@color/black"
+            app:boxStrokeColor="@color/bordercolor" />
     </LinearLayout>
 
 

@@ -9,7 +9,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,12 +37,14 @@ public class MainActivity extends AppCompatActivity {
         final Spinner PhysicianSampleSpinner=findViewById(R.id.spinner_physiciansample);
         final Spinner GiftSpinner=findViewById(R.id.spinner_gift);
 
-        TextView LiteratureTextView=findViewById(R.id.editText_literature);
-        TextView PhysicianTextView=findViewById(R.id.editText_physiciansample);
-        TextView GiftTextView=findViewById(R.id.editText_gift);
+        final TextView LiteratureTextView=findViewById(R.id.editText_literature);
+        final TextView PhysicianTextView=findViewById(R.id.editText_physiciansample);
+        final TextView GiftTextView=findViewById(R.id.editText_gift);
 
         TextInputEditText AccompaniedWithEditText=findViewById(R.id.field_accompaniedwith);
         TextInputEditText RemarksEditText=findViewById(R.id.edittext_remarks);
+
+        Button SubmitButton=findViewById(R.id.button_submit);
 
 
         //Creating a retrofit object
@@ -88,11 +93,23 @@ public class MainActivity extends AppCompatActivity {
                 ProductGroupAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 ProductGroupSpinner.setAdapter(ProductGroupAdapter);
 
+                //ProductGroupSpinner.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+                ProductGroupSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                                  @Override
+                                                                  public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long l) {
 
-                //LITERATURE
-                List<LiteratureList> literatureLists=  SampleList.getLiteratureList();
+                                                                  }
+
+                                                                  @Override
+                                                                  public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                                                  }
+                                                              });
+
+                        //LITERATURE
+                        List < LiteratureList > literatureLists = SampleList.getLiteratureList();
                 List<String> LiteratureString= new ArrayList<String>();
-                List<Integer> LiteratureId= new ArrayList<Integer>();
+                final List<Integer> LiteratureId= new ArrayList<Integer>();
                 //1st Item
                 LiteratureString.add("Choose ");
                 LiteratureId.add(00);
@@ -106,11 +123,24 @@ public class MainActivity extends AppCompatActivity {
                         android.R.layout.simple_spinner_item, LiteratureString );
                 LiteratureAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 LiteratureSpinner.setAdapter(LiteratureAdapter);
+                LiteratureSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long l) {
+                        LiteratureTextView.setText(LiteratureId.get(pos).toString());
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+                        LiteratureTextView.setText("00");
+                    }
+                });
+
+
 
                 //PHYSICIANSAMPLE
                 List<PhysicianSampleList> PhysicianSampleLists=  SampleList.getPhysicianSampleList();
                 List<String> PhysicianSampleString= new ArrayList<String>();
-                List<Integer> PhysicianSampleId= new ArrayList<Integer>();
+                final List<Integer> PhysicianSampleId= new ArrayList<Integer>();
                 //1st Item
                 PhysicianSampleString.add("Choose ");
                 PhysicianSampleId.add(00);
@@ -124,12 +154,23 @@ public class MainActivity extends AppCompatActivity {
                         android.R.layout.simple_spinner_item, PhysicianSampleString );
                 PhysicianSampleAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 PhysicianSampleSpinner.setAdapter(PhysicianSampleAdapter);
+                PhysicianSampleSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long l) {
+                        PhysicianTextView.setText(PhysicianSampleId.get(pos).toString());
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+                        PhysicianTextView.setText("00");
+                    }
+                });
 
 
                 //GIFT
                 List<GiftList> giftLists=  SampleList.getGiftList();
                 List<String> GiftString= new ArrayList<String>();
-                List<Integer> GiftId= new ArrayList<Integer>();
+                final List<Integer> GiftId= new ArrayList<Integer>();
                 //1st Item
                 GiftString.add("Choose ");
                 GiftId.add(00);
@@ -144,13 +185,21 @@ public class MainActivity extends AppCompatActivity {
                 GiftAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 GiftSpinner.setAdapter(GiftAdapter);
 
+                GiftSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long l) {
+                        GiftTextView.setText(GiftId.get(pos).toString());
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+                        GiftTextView.setText("00");
+                    }
+                });
 
 
-                Log.e("tag ", SampleList.getPhysicianSampleList().toString());
-                Log.e("tag",SampleList.getProductGroupList().toString());
-                Log.e("tag",SampleList.getGiftList().toString());
                 //now we can do whatever we want with this list
-                Toast.makeText(getApplicationContext(),"WORKS FINE",Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),"CHOLTESE",Toast.LENGTH_LONG).show();
 
             }
 
@@ -162,6 +211,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+        });
+
+        SubmitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this,"done",Toast.LENGTH_LONG);
+            }
         });
 
 
