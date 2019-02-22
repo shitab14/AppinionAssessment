@@ -45,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
         TextInputEditText RemarksEditText=findViewById(R.id.edittext_remarks);
 
         Button SubmitButton=findViewById(R.id.button_submit);
+        SubmitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this,"done",Toast.LENGTH_LONG).show();
+            }
+        });
 
 
         //Creating a retrofit object
@@ -213,12 +219,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        SubmitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this,"done",Toast.LENGTH_LONG);
-            }
-        });
+
 
 
     }
