@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 List<String> ProductGroupString= new ArrayList<String>();
                 List<Integer> ProductGroupId= new ArrayList<Integer>();
                 //1st Item
-                ProductGroupString.add("Choose ");
+                ProductGroupString.add("  Choose ");
                 ProductGroupId.add(00);
                 for (ProductGroupList pgdata : ProductGroupLists) {
                     ProductGroupString.add(pgdata.getProductGroup());
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                 List<String> LiteratureString= new ArrayList<String>();
                 final List<Integer> LiteratureId= new ArrayList<Integer>();
                 //1st Item
-                LiteratureString.add("Choose ");
+                LiteratureString.add("  Choose ");
                 LiteratureId.add(00);
                 for (LiteratureList ldata : literatureLists) {
                     LiteratureString.add(ldata.getLiterature());
@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
                 List<String> PhysicianSampleString= new ArrayList<String>();
                 final List<Integer> PhysicianSampleId= new ArrayList<Integer>();
                 //1st Item
-                PhysicianSampleString.add("Choose ");
+                PhysicianSampleString.add("  Choose ");
                 PhysicianSampleId.add(00);
                 for (PhysicianSampleList psdata : PhysicianSampleLists) {
                     PhysicianSampleString.add(psdata.getSample());
@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
                 List<String> GiftString= new ArrayList<String>();
                 final List<Integer> GiftId= new ArrayList<Integer>();
                 //1st Item
-                GiftString.add("Choose ");
+                GiftString.add("  Choose ");
                 GiftId.add(00);
                 for (GiftList gdata : giftLists) {
                     GiftString.add(gdata.getGift());

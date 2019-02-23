@@ -62,7 +62,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp">
+            android:padding="10dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -103,12 +103,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/spinner_bg">
+                    android:background="@drawable/spinner_bg"
+                    >
 
                     <Spinner
                         android:id="@+id/spinner_literature"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp" />
+                        android:layout_height="50dp"
+                        />
                 </LinearLayout>
 
                 <TextView
@@ -130,7 +132,7 @@
                 android:background="@drawable/spinner_bg"
                 android:enabled="false"
                 android:gravity="center"
-                android:inputType="number"
+
                 android:text="  "
                 android:textColor="@color/black"
                 app:boxStrokeColor="@color/bordercolor" />
@@ -182,7 +184,7 @@
             android:background="@drawable/spinner_bg"
             android:enabled="false"
             android:gravity="center"
-            android:inputType="number"
+
             android:text="  "
             android:textColor="@color/black"
             app:boxStrokeColor="@color/bordercolor" />
@@ -232,7 +234,7 @@
             android:background="@drawable/spinner_bg"
             android:enabled="false"
             android:gravity="center"
-            android:inputType="number"
+
             android:text="  "
             android:textColor="@color/black"
             app:boxStrokeColor="@color/bordercolor" />
